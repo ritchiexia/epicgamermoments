@@ -9,22 +9,25 @@ body {
     height: 100vh;
     background: #1F2835;
     color: white;
+    overflow: hidden;
     /* transition: all 300ms ease; /* smooth out the transition between light and dark */
   }
 
   /* Title bar */
   #titlebar {
-    height: 10vh;
+    height: 80px;
     width: 100%;
     position: absolute;
     top: 0px;
     left: 0px;
     background:#2B3648;
     color: #f0f0f0;
+    border-bottom: 2px solid grey;
   }
   h1{
     position: absolute;
     left: 100px;
+    top: 10px;
     bottom: 30px;
     margin: 10px;
   }
@@ -35,15 +38,16 @@ body {
     border: none;
     font-size: 17px;
     position: absolute;
-    left: 500px;
-    bottom: 40px;
+    top: 23px;
+    left: 505px;
+    bottom: 20px;
     width: 30vw;
     border-radius: 18px; /*round bois* */
   }
   #topbarHome{
     padding: 10px;
     position: absolute;
-    top: -8px;
+    top: -5px;
     right: 700px;
     text-decoration: none;
     color: #f0f0f0;
@@ -51,31 +55,44 @@ body {
   #topbarGames{
     padding: 10px;
     position: absolute;
-    top: -7px;
-    right: 600px;
+    top: -4px;
+    right: 580px;
     text-decoration: none;
     color: #f0f0f0;
   }
   #topbarUpload{
     position: absolute;
-    right: 500px;
-    top: -10px;
+    right: 525px;
+    top: 28px;
     max-width: 30px;
     max-height:30px;
   }
-
-  
-  /* Follower box */
-  #followerbox {
-    height: 70vh;
-    width: 18%;
+  #monke{
+    position:absolute;
+    right: 420px;
+    top: 18px;
+    border-radius: 50%;
+    max-height: 45px;
+    max-width: 45px;
+  }
+  #welcome{
     position: absolute;
-    top: 20%;
-    right: 5%;
-    text-align: center;
-    border: 10px solid rgb(76, 74, 90);
-    border-radius: 10px;
-    background: grey;
+    right: 160px;
+    top:5px;
+  }
+  #settings{
+    position:absolute;
+    right: 80px;
+    top: 23px;
+    border-radius: 50%;
+    max-height: 45px;
+    max-width: 45px;
+  }
+  #discoverTitle{
+    position: absolute;
+    left:10%;
+    top: 11%;
+    font-size: 4vh;
   }
 
   /* "flexbox" */
@@ -107,6 +124,47 @@ body {
     background: rgba(0, 0, 0, 0.842);
     color: #f0f0f0;
   }
+  
+  /* Follower box */
+  #followerbox {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    width: 18%;
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    text-align: center;
+    
+    border: 20px solid;
+    border-image-source: linear-gradient(45deg, rgb(76, 74, 90), rgb(32, 26, 65));
+    border-image-slice: 1;
+    border-radius: 10px;
+    background: grey;
+    overflow: auto;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgb(58, 58, 58);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+      background: rgb(88, 88, 88);
+  }
+
+  #followertitle {
+    position: absolute;
+    height: 100px;
+    left: 76%;
+    top: 8%;
+    display: flex;
+  }
 
   .followerimg {
     max-width: 45px;
@@ -116,17 +174,63 @@ body {
 
   .followerblock {
     display: flex;
-    padding-left: 20px;
+    padding-left: 35px;
     padding-top: 5px;
+    padding-bottom: 10px;
     height: 120px;
     /* temp border for visualization */
     /* border: 4px solid black; */
     align-items: left;
-    gap: 40px;
+    gap: 10px;
   }
 
   .followervid {
     max-height: 117px;
     max-width: 208px;
-    border-radius: 5px;
+    border-radius: 15px;
+  }
+
+  #discoverbox {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    height: 73vh;
+    position: absolute;
+    width: 60%;
+    top: 20%;
+    left: 10%;
+    /* border: 4px solid white; */
+    overflow-y: auto;
+  }
+
+  #discoverbox::-webkit-scrollbar {
+    display: none;
+  }
+
+  .discoverblock {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .discovervid {
+    max-height: 576px;
+    max-width: 1024px;
+  }
+
+  .discoverfooter {
+    background-image: linear-gradient(to bottom, #1F2835, #516380);
+    border-radius: 45px;
+    display: flex;
+    max-width: 1007px;
+    max-height: 45px;
+    margin-top: 10px;
+    margin-bottom: 41px;
+  }
+
+  .discovercomments {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    flex-direction: column;
+    overflow: hidden;
   }
