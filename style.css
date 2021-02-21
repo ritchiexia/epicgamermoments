@@ -7,16 +7,86 @@ body {
     justify-content: center; /* center lengthwise */
     align-items: center; /* center heightwise, but we need to specify page height */
     height: 100vh;
-    background: white;
-    color: rgb(111, 140, 236);
-    transition: all 300ms ease; /* smooth out the transition between light and dark */
+    background: #1F2835;
+    color: white;
+    /* transition: all 300ms ease; /* smooth out the transition between light and dark */
   }
+
+  /* Title bar */
+  #titlebar {
+    height: 10vh;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background:#2B3648;
+    color: #f0f0f0;
+  }
+  h1{
+    position: absolute;
+    left: 100px;
+    bottom: 30px;
+    margin: 10px;
+  }
+  #titlebar input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    margin-right: 16px;
+    border: none;
+    font-size: 17px;
+    position: absolute;
+    left: 500px;
+    bottom: 40px;
+    width: 30vw;
+    border-radius: 18px; /*round bois* */
+  }
+  #topbarHome{
+    padding: 10px;
+    position: absolute;
+    top: -8px;
+    right: 700px;
+    text-decoration: none;
+    color: #f0f0f0;
+  }
+  #topbarGames{
+    padding: 10px;
+    position: absolute;
+    top: -7px;
+    right: 600px;
+    text-decoration: none;
+    color: #f0f0f0;
+  }
+  #topbarUpload{
+    position: absolute;
+    right: 500px;
+    top: -10px;
+    max-width: 30px;
+    max-height:30px;
+  }
+
   
+  /* Follower box */
+  #followerbox {
+    height: 70vh;
+    width: 18%;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+    text-align: center;
+    border: 10px solid rgb(76, 74, 90);
+    border-radius: 10px;
+    background: grey;
+  }
+
   /* "flexbox" */
   div {
+    padding: 5px;
+  }
+
+  .flexbox {
     /* center the div text so center-align */
     text-align: center;
-    border: 4px solid rgb(28, 5, 230); /* can do double, dotted, etc. */
+    border: 10px solid rgb(95, 82, 207); /* can do double, dotted, etc. */
     padding: 16px; /* make text spaced out */
     box-shadow: 8px 8px rgb(0, 102, 255); /* depth, offset */
     border-radius: 10px; /* round corners */
@@ -24,17 +94,39 @@ body {
   
   img {
     max-width: 100px;
-    border-radius: 50%; /* create a circle image with square image */
+    /*border-radius: 50%; /* create a circle image with square image */
   }
   
   a {
     text-decoration: none; /* gets rid of style from a-tag */
-    color: rgba(99, 140, 255, 0.555);
-    font-weight: bold; /* bold the text */
+    color: white;
   }
   
   /* the . specifies a class in HTML file */
   .dark {
     background: rgba(0, 0, 0, 0.842);
     color: #f0f0f0;
+  }
+
+  .followerimg {
+    max-width: 45px;
+    max-height: 45px;
+    border-radius: 50%;
+  }
+
+  .followerblock {
+    display: flex;
+    padding-left: 20px;
+    padding-top: 5px;
+    height: 120px;
+    /* temp border for visualization */
+    /* border: 4px solid black; */
+    align-items: left;
+    gap: 40px;
+  }
+
+  .followervid {
+    max-height: 117px;
+    max-width: 208px;
+    border-radius: 5px;
   }
