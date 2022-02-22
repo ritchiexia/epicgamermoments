@@ -1,8 +1,31 @@
+:root {
+  --blue: rgb(77, 178, 211);
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 0;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
   min-height: 10vh;
-  background: lightblue;
+  background: var(--blue);
+  padding: 0 1rem;
+}
+
+.nav-btn {
+  font-family: inherit;
+  border: none;
+  background: transparent;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.nav-btn:hover {
+  cursor: pointer;
 }
 
 .nav-links {
