@@ -28,10 +28,15 @@ nav {
   cursor: pointer;
 }
 
-.nav-links {
-  width: 50%;
+.postlist {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  list-style: none;
 }
+
+.post {
+  display: flex;
+}
+
+.reactions-box {
+  display: flex;
+}
+
