@@ -85,6 +85,12 @@ a {
   fill: white;
 }
 
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .nav-icon {
   width: 20px;
   height: 20px;
@@ -128,6 +134,9 @@ a {
 }
 
 .game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -146,13 +155,14 @@ a {
 }
 
 .banner > img {
-  width: 255px;
-  height: 383px;
+  width: 285px;
+  height: 380px;
   object-fit: cover;
   vertical-align: top;
-  transition: transform 200ms;
+  transition: all 200ms;
 }
 
 .banner > img:hover {
   transform: translate(5px, -5px);
+  filter: brightness(0.8);
 }
