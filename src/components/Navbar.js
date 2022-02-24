@@ -5,18 +5,20 @@ import { ReactComponent as GamesIcon } from "../icons/games.svg";
 
 const Navbar = () => {
   return (
-    <div className="navbar">
-      <Logo />
-      <nav>
-        <NavLink to="/" activeClassName className="nav-btn">
-          <HomeIcon className="nav-icon" />
-          <p>HOME</p>
-        </NavLink>
-        <NavLink to="/games" activeClassName className="nav-btn">
-          <GamesIcon className="nav-icon" />
-          <p>GAMES</p>
-        </NavLink>
-      </nav>
+    <div className="navbar-bg">
+      <div className="navbar">
+        <Logo />
+        <nav>
+          <NavLink to="/" activeClassName className="nav-btn">
+            <HomeIcon className="nav-icon" />
+            <p>HOME</p>
+          </NavLink>
+          <NavLink to="/games" activeClassName className="nav-btn">
+            <GamesIcon className="nav-icon" />
+            <p>GAMES</p>
+          </NavLink>
+        </nav>
+      </div>
     </div>
   );
 };
