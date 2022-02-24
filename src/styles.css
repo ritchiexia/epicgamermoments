@@ -1,31 +1,63 @@
+@import url("https://fonts.googleapis.com/css?family=Overpass");
+
 :root {
   --blue: rgb(77, 178, 211);
+  --dark-blue: rgb(36, 124, 153);
 }
 
 body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
+  font-family: "Overpass", sans-serif;
   margin: 0;
 }
 
 nav {
   display: flex;
-  justify-content: space-between;
-  min-height: 10vh;
+  gap: 0.5rem;
+}
+
+/* NAVBAR */
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 60px;
   background: var(--blue);
   padding: 0 1rem;
 }
 
 .nav-btn {
   font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  height: 1.5rem;
   border: none;
   background: transparent;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 800;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  color: black;
+  transition: color 200ms, fill 200ms;
 }
 
 .nav-btn:hover {
   cursor: pointer;
+  color: white;
+  fill: white;
+}
+
+.active {
+  border-bottom: 3px white solid;
+  color: white;
+  fill: white;
+}
+
+.nav-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .nav-links {
@@ -34,4 +66,21 @@ nav {
   justify-content: space-evenly;
   align-items: center;
   list-style: none;
+}
+
+/* MAIN CONTENT */
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* HOME */
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
 }
