@@ -1,14 +1,18 @@
 import { useState } from "react"
+import bruhIcon from "../icons/bruh.png"
+import epicIcon from "../icons/epic.png"
+import cringeIcon from "../icons/cringe.png"
+import pogIcon from "../icons/pog.png"
 
 const Post = ({post}) => {
-    let [epicCount, setEpicCount] = useState(0);
-    let [cringeCount, setCringeCount] = useState(0);
-    let [pogCount, setPogCount] = useState(0);
-    let [bruhCount, setBruhCount] = useState(0);
+    let [showEpic, setShowEpic] = useState(false);
+    let [showCringe, setShowCringe] = useState(false);
+    let [showPog, setShowPog] = useState(false);
+    let [showBruh, setShowBruh] = useState(false);
 
     return (
         <div className="post-container">
-            <video autoplay controls className="post-video">
+            <video autoPlay controls className="post-video">
                 <source src={post.video}></source>
             </video>
             <div className="post-title-container">
@@ -16,21 +20,21 @@ const Post = ({post}) => {
                 <h3>Posted by: {post.op}</h3>
             </div>
             <div className="reactions-box">
-                <button className="reactbtn" onClick={() => {setEpicCount(++epicCount)}}>
-                    <img className="reacticon" alt="epic" src="https://cdn.discordapp.com/attachments/707031501392314369/812947171220783145/b11d33f9a2775e2b4f030b5b3a0ee666-removebg-preview_2.png" />
-                        EPIC: {epicCount}
+                <button className={`reactbtn ${showEpic ? "activebtn" : ""}`} onClick={() => {setShowEpic(!showEpic)}}>
+                    <img className="reacticon" alt="epic" src={epicIcon} />
+                        EPIC
                 </button>
-                <button className="reactbtn" onClick={() => {setCringeCount(++cringeCount)}}>
-                    <img className="reacticon" alt="cringe" src="https://media.discordapp.net/attachments/707031501392314369/812945146374127626/108-1083789_cringe-discord-emoji-clipart-png-download-transparent-png-removebg-preview.png" />
-                        CRINGE: {cringeCount}
+                <button className={`reactbtn ${showCringe ? "activebtn" : ""}`} onClick={() => {setShowCringe(!showCringe)}}>
+                    <img className="reacticon" alt="cringe" src={cringeIcon} />
+                        CRINGE
                 </button>
-                <button className="reactbtn" onClick={() => {setPogCount(++pogCount)}}>
-                    <img className="reacticon" alt="pog" src="https://cdn.discordapp.com/attachments/707031501392314369/812954260157366302/unknown.png" />
-                        POG: {pogCount}
+                <button className={`reactbtn ${showPog ? "activebtn" : ""}`} onClick={() => {setShowPog(!showPog)}}>
+                    <img className="reacticon" alt="pog" src={pogIcon} />
+                        POG
                 </button>
-                <button className="reactbtn" onClick={() => {setBruhCount(++bruhCount)}}>
-                    <img className="reacticon" alt="bruh" src="https://cdn.discordapp.com/attachments/707031501392314369/812943432602615848/unknown.png" />
-                        BRUH {bruhCount}
+                <button className={`reactbtn ${showBruh ? "activebtn" : ""}`} onClick={() => {setShowBruh(!showBruh)}}>
+                    <img className="reacticon" alt="bruh" src={bruhIcon} />
+                        BRUH
                 </button>
             </div>
         </div>

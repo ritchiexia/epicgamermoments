@@ -90,7 +90,7 @@ nav {
   margin-left: 7px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between; 
 }
 
 .post-video {
@@ -110,6 +110,10 @@ nav {
 .reactbtn {
   border: none;
   border-radius: 5px;
+}
+
+.activebtn {
+  background-color: rgb(148, 144, 144);
 }
 
 .reactbtn:hover {
