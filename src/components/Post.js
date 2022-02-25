@@ -8,9 +8,12 @@ const Post = ({post}) => {
 
     return (
         <div className="post-container">
-            <div className="video"></div>
+            <video autoplay controls className="post-video">
+                <source src={post.video}></source>
+            </video>
             <div className="post-title-container">
-                <h3>{post.title}</h3>
+                <h2>{post.title}</h2>
+                <h3>Posted by: {post.op}</h3>
             </div>
             <div className="reactions-box">
                 <button className="reactbtn" onClick={() => {setEpicCount(++epicCount)}}>
