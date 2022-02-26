@@ -3,16 +3,36 @@
 :root {
   --blue: rgb(77, 178, 211);
   --dark-blue: rgb(36, 124, 153);
+  --light-grey: #f1f1f1;
+  --dark-grey: #303030;
 }
 
 body {
   font-family: "Overpass", sans-serif;
   margin: 0;
+  background: var(--dark-grey);
+  color: gainsboro;
+  overflow: overlay;
 }
 
 nav {
   display: flex;
   gap: 0.5rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.5);
 }
 
 /* NAVBAR */
@@ -63,6 +83,12 @@ nav {
   border-bottom: 3px white solid;
   color: white;
   fill: white;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .nav-icon {
@@ -145,4 +171,50 @@ nav {
   justify-content: center;
   align-items: center;
   max-width: 1000px;
+}
+
+/* GAMES */
+
+.games-grid {
+  height: 100%;
+  width: 70vw;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 255px);
+  grid-auto-rows: fit-content;
+  gap: 20px;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.game > p {
+  font-weight: bold;
+}
+
+.game > p:hover {
+  color: var(--dark-blue);
+}
+
+.banner {
+  background-color: var(--dark-blue);
+}
+
+.banner > img {
+  width: 285px;
+  height: 380px;
+  object-fit: cover;
+  vertical-align: top;
+  transition: all 200ms;
+}
+
+.banner > img:hover {
+  transform: translate(5px, -5px);
+  filter: brightness(0.8);
 }
